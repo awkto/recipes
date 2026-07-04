@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping List</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" id="brand" class="brand">🛒 Shopping List</a>
+  </header>
+
+  <main id="app">
+    <p class="loading">Loading…</p>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">All recipes</a></p>
+  </footer>
+
+  <script>
+  "use strict";
+  const app = document.getElementById("app");
+  const params = new URLSearchParams(location.search);
+  const id = params.get("r");
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  const storeKey = (rid) => "shoplist:" + rid;
+  function loadChecked(rid) {
+    try { return new Set(JSON.parse(localStorage.getItem(storeKey(rid)) || "[]")); }
+    catch (e) { return new Set(); }
+  }
+  function saveChecked(rid, set) {
+    try { localStorage.setItem(storeKey(rid), JSON.stringify([...set])); } catch (e) {}
+  }
+
+  if (!id) {
+    app.innerHTML = '<p class="empty">No recipe selected. <a href="index.html">Pick a recipe</a> and open its shopping list.</p>';
+  } else {
+    fetch("recipes.json", { cache: "no-cache" })
+      .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then((data) => {
+        const recipe = (data || []).find((x) => x.id === id);
+        if (!recipe || !recipe.shopping) {
+          app.innerHTML = '<p class="empty">No shopping list for this recipe.</p>';
+          return;
+        }
+        render(recipe);
+      })
+      .catch((err) => {
+        app.innerHTML = '<p class="empty">Could not load list — ' + escapeHtml(err.message) + '</p>';
+      });
+  }
+
+  function render(recipe) {
+    document.title = "Shopping · " + recipe.title;
+    document.getElementById("brand").textContent = "🛒 " + recipe.title;
+
+    const checked = loadChecked(recipe.id);
+    // Build a stable key for each item so ticks survive reloads.
+    let n = 0;
+    const sections = recipe.shopping.map((sec) => {
+      const items = (sec.items || []).map((it) => {
+        const key = "i" + (n++);
+        const on = checked.has(key);
+        return (
+          '<li class="shop-item' + (on ? " done" : "") + '" data-key="' + key + '">' +
+          '<span class="check"></span>' +
+          '<span class="shop-body">' +
+          '<span class="shop-name">' + escapeHtml(it.name) + "</span>" +
+          (it.hint ? '<span class="shop-hint">' + escapeHtml(it.hint) + "</span>" : "") +
+          (it.amt ? '<span class="shop-amt">' + escapeHtml(it.amt) + "</span>" : "") +
+          "</span></li>"
+        );
+      }).join("");
+      return (
+        '<section class="shop-section"><h2 class="shop-head">' +
+        escapeHtml(sec.section) + "</h2><ul class=\"shop-list\">" + items + "</ul></section>"
+      );
+    }).join("");
+
+    app.innerHTML =
+      '<a class="back" href="index.html#/recipe/' + encodeURIComponent(recipe.id) + '">← ' + escapeHtml(recipe.title) + "</a>" +
+      '<div class="progress-wrap"><div class="progress-num"><span id="got">0</span>/<span id="total">0</span></div>' +
+      '<div class="progress-track"><div class="progress-fill" id="fill"></div></div>' +
+      '<button class="reset-btn" id="reset">Reset</button></div>' +
+      sections;
+
+    const items = [...app.querySelectorAll(".shop-item")];
+    const got = document.getElementById("got");
+    const total = document.getElementById("total");
+    const fill = document.getElementById("fill");
+    total.textContent = items.length;
+
+    function update() {
+      const done = items.filter((i) => i.classList.contains("done")).length;
+      got.textContent = done;
+      fill.style.width = (items.length ? Math.round((done / items.length) * 100) : 0) + "%";
+    }
+    items.forEach((li) => {
+      li.addEventListener("click", () => {
+        li.classList.toggle("done");
+        const key = li.dataset.key;
+        if (li.classList.contains("done")) checked.add(key); else checked.delete(key);
+        saveChecked(recipe.id, checked);
+        update();
+      });
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      items.forEach((i) => i.classList.remove("done"));
+      checked.clear();
+      saveChecked(recipe.id, checked);
+      update();
+    });
+    update();
+  }
+  </script>
+</body>
+</html>

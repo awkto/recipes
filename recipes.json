@@ -1,0 +1,132 @@
+[
+  {
+    "id": "greek-gyro-wraps",
+    "title": "Greek Chicken Gyro Wraps",
+    "description": "Lemon-and-oregano marinated chicken, a quick grated-cucumber tzatziki, and a build-your-own bar so everyone rolls their own.",
+    "servings": 4,
+    "prepTime": "15 min",
+    "marinateTime": "20 min",
+    "cookTime": "12 min",
+    "tags": ["dinner", "chicken", "kid-friendly"],
+    "ingredients": [
+      {
+        "group": "The chicken",
+        "items": [
+          "600 g chicken thigh fillets",
+          "2 garlic cloves, crushed",
+          "2 tbsp olive oil",
+          "1 lemon, juiced",
+          "1 tbsp dried oregano",
+          "1 tsp sweet paprika",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "group": "The tzatziki",
+        "items": [
+          "1 cup thick Greek yoghurt",
+          "1/2 Lebanese cucumber, grated",
+          "1 garlic clove, crushed",
+          "Pinch of salt"
+        ]
+      },
+      {
+        "group": "To build",
+        "items": [
+          "4 large wraps or pita",
+          "1 tomato, sliced",
+          "1/4 red onion, thinly sliced",
+          "Handful shredded lettuce"
+        ]
+      },
+      {
+        "group": "Optional / traditional",
+        "items": [
+          "Oven chips (they go inside the wrap)",
+          "Extra lemon wedges, to serve",
+          "Handful grated tasty cheese"
+        ]
+      }
+    ],
+    "steps": [
+      "Marinate first, then prep everything else while it sits. Mix the garlic, olive oil, lemon, oregano, paprika and salt. Cut the thighs into strips — more surface area means the 20 minutes does more work — then coat and set aside.",
+      "Make the tzatziki. Grate the cucumber, wring the water out in a tea towel, then stir it into the yoghurt with the garlic and a pinch of salt. Into the fridge.",
+      "Prep the fillings. Slice the tomato and onion, shred the lettuce, grate cheese if using. Lay it all out bar-style.",
+      "Cook hot and fast. Get the pan properly hot. The strips need just 3–4 minutes, tossing, until charred at the edges and no pink inside. Don't crowd the pan.",
+      "Warm the wraps for a few seconds in the dry pan so they fold without cracking.",
+      "Lift the short marinade — a squeeze of fresh lemon and a pinch of oregano over the cooked chicken makes up for the quick soak.",
+      "Build your own: warm wrap laid flat, a smear of tzatziki down the middle (not the edges, or it squeezes out), chicken strips down the centre, chips if you're going full gyro, then salad and a little onion. Fold one end up first, then roll tight and wrap the base so nothing drops out."
+    ],
+    "notes": "Kids' jobs: grating and wringing the cucumber, mixing the tzatziki, and running the build-your-own line — same appeal as a taco bar. No time to pre-marinate? Cutting the chicken into strips lets 20 minutes do real work, and with strips you can skip resting the meat too. One 500 g tub of Greek yoghurt covers the tzatziki here and a two-ingredient naan another night.",
+    "shopping": [
+      { "section": "Meat", "items": [
+        { "name": "Chicken thigh fillets", "amt": "600 g · 1 pack", "hint": "boneless — juicier than breast" }
+      ]},
+      { "section": "Fruit & Veg", "items": [
+        { "name": "Lemons", "amt": "2", "hint": "1 juiced for the marinade, wedges to serve" },
+        { "name": "Lebanese cucumber", "amt": "1", "hint": "tzatziki only uses ½" },
+        { "name": "Tomato", "amt": "1 large / 2 small" },
+        { "name": "Red onion", "amt": "1", "hint": "recipe uses ¼, but they don't sell quarters" },
+        { "name": "Garlic", "amt": "1 bulb", "hint": "3 cloves total: 2 chicken + 1 tzatziki" }
+      ]},
+      { "section": "Bakery / Bread", "items": [
+        { "name": "Souvlaki bread or wraps", "amt": "1 pack (4+)", "hint": "the medium one — not the thin pocket pita" }
+      ]},
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Greek yoghurt, thick", "amt": "500 g tub", "hint": "need 1 cup — tub also covers a naan another night" }
+      ]},
+      { "section": "Salad / Bagged", "items": [
+        { "name": "Shredded lettuce", "amt": "1 small bag", "hint": "pre-cut, kids can scatter it" }
+      ]},
+      { "section": "Pantry / Spices", "items": [
+        { "name": "Dried oregano", "amt": "1 jar", "hint": "need 1 tbsp" },
+        { "name": "Sweet paprika (not hot)", "amt": "1 jar", "hint": "need 1 tsp" },
+        { "name": "Olive oil & salt", "amt": "check pantry", "hint": "probably already have" }
+      ]},
+      { "section": "Freezer (optional)", "items": [
+        { "name": "Oven chips", "amt": "1 bag", "hint": "if going full gyro — chips go inside the wrap" },
+        { "name": "Grated tasty cheese", "amt": "handful", "hint": "optional" }
+      ]}
+    ]
+  },
+  {
+    "id": "fettuccine-alfredo",
+    "title": "Fettuccine Alfredo",
+    "description": "Silky, restaurant-style alfredo. The sauce comes together in about the time the pasta cooks.",
+    "servings": 4,
+    "prepTime": "5 min",
+    "cookTime": "15 min",
+    "tags": ["dinner", "vegetarian", "pasta", "quick"],
+    "ingredients": [
+      "400 g fettuccine (dried is fine) — use ~330 g if scaling the sauce down",
+      "85 g unsalted butter (about ⅓ of a 250 g block)",
+      "200–240 ml cream (thickened or pure cream is easiest)",
+      "100 g Parmigiano-Reggiano, finely grated — plus extra for serving",
+      "Salt and freshly ground black pepper",
+      "Optional: 2 garlic cloves (minced), a pinch of nutmeg"
+    ],
+    "steps": [
+      "Boil the pasta. Big pot of well-salted water. Cook the fettuccine until just shy of al dente (~12 min is normal). Before draining, scoop out a mug of the starchy pasta water.",
+      "Melt the butter in a wide pan on low heat. (Add the garlic now if using — about 1 minute, don't let it brown.)",
+      "Pour the cream into the melted butter and heat gently until steaming, not boiling.",
+      "Cheese goes in off the heat. Pull the pan off the burner and let it stop bubbling, then add the parmesan a handful at a time, whisking each lot in smoothly before the next.",
+      "Drain the pasta (don't rinse) and tip it into the sauce. Toss hard, splashing in pasta water bit by bit until the sauce turns silky and coats every strand. Season with salt and pepper.",
+      "Serve immediately on warm plates with extra parmesan grated over the top. Alfredo stiffens as it sits, so don't let it wait."
+    ],
+    "notes": "The rules that matter most: keep the heat low (heat is what breaks the sauce); add the cheese off the heat (too hot turns it grainy and stringy); pasta water is your fix — if it ever looks tight, oily or split, a splash plus hard tossing pulls it back together; and use a real block of parmesan grated yourself, since pre-shredded has anti-caking starch that won't melt cleanly. To level up later, drop the cream entirely and make the Roman version: just butter, parmesan and pasta water emulsified together.",
+    "shopping": [
+      { "section": "Pasta", "items": [
+        { "name": "Fettuccine", "amt": "400 g · 1 pack", "hint": "dried is fine" }
+      ]},
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Unsalted butter", "amt": "1 block", "hint": "need about 85 g" },
+        { "name": "Cream (thickened or pure)", "amt": "300 ml", "hint": "" },
+        { "name": "Parmigiano-Reggiano", "amt": "block, 100 g+", "hint": "a real block to grate — not pre-shredded" }
+      ]},
+      { "section": "Pantry / Spices", "items": [
+        { "name": "Salt & pepper", "amt": "check pantry", "hint": "probably already have" },
+        { "name": "Garlic + nutmeg", "amt": "optional", "hint": "only if you want them" }
+      ]}
+    ]
+  }
+]

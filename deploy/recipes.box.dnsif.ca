@@ -1,0 +1,41 @@
+# nginx site for recipes.box.dnsif.ca
+# Static files served straight from the git checkout — no app process, ~0 extra RAM.
+# Uses the wildcard cert (*.box.dnsif.ca) and wildcard DNS already on the box.
+# Install: sudo cp deploy/recipes.box.dnsif.ca /etc/nginx/sites-available/
+#          sudo ln -sf /etc/nginx/sites-available/recipes.box.dnsif.ca /etc/nginx/sites-enabled/
+#          sudo nginx -t && sudo systemctl reload nginx
+
+server {
+    listen 80;
+    server_name recipes.box.dnsif.ca;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name recipes.box.dnsif.ca;
+
+    ssl_certificate     /etc/nginx/ssl/box.dnsif.ca.fullchain.crt;
+    ssl_certificate_key /etc/nginx/ssl/box.dnsif.ca.key;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+
+    root /home/altanc/git/recipes;
+    index index.html;
+
+    # don't serve .git or other dotfiles
+    location ~ /\. { deny all; }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # recipes.json changes often — don't let it get cached stale
+    location = /recipes.json {
+        add_header Cache-Control "no-cache";
+    }
+
+    location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff2?)$ {
+        expires 1h;
+        add_header Cache-Control "public";
+    }
+}
