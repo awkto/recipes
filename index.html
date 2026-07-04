@@ -5,20 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Recipes</title>
   <meta name="description" content="A little collection of recipes we cook at home.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>">
 </head>
 <body>
-  <header class="site-header">
-    <a href="#/" class="brand">🍳 Our Recipes</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="#/" class="mast-brand">Our <span class="lem">Recipes</span></a>
+      <span class="mast-tag">Cooked &amp; loved at home</span>
+    </div>
   </header>
 
-  <main id="app">
+  <main id="app" class="wrap">
     <p class="loading">Loading recipes…</p>
   </main>
 
   <footer class="site-footer">
-    <p>Made at home. <a href="#/">All recipes</a></p>
+    <div class="wrap">
+      <span>Our Recipes</span>
+      <a href="#/">All recipes →</a>
+    </div>
   </footer>
 
   <script src="app.js"></script>

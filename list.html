@@ -4,20 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shopping List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
 </head>
 <body>
-  <header class="site-header">
-    <a href="#" id="brand" class="brand">🛒 Shopping List</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="index.html" class="mast-brand">Our <span class="lem">Recipes</span></a>
+      <span class="mast-tag">Shopping list</span>
+    </div>
   </header>
 
-  <main id="app">
+  <main id="app" class="wrap">
     <p class="loading">Loading…</p>
   </main>
 
   <footer class="site-footer">
-    <p><a href="index.html">All recipes</a></p>
+    <div class="wrap">
+      <span>Tap items to tick · saved on this device</span>
+      <a href="index.html">All recipes →</a>
+    </div>
   </footer>
 
   <script>
@@ -61,10 +70,8 @@
 
   function render(recipe) {
     document.title = "Shopping · " + recipe.title;
-    document.getElementById("brand").textContent = "🛒 " + recipe.title;
 
     const checked = loadChecked(recipe.id);
-    // Build a stable key for each item so ticks survive reloads.
     let n = 0;
     const sections = recipe.shopping.map((sec) => {
       const items = (sec.items || []).map((it) => {
@@ -80,14 +87,13 @@
           "</span></li>"
         );
       }).join("");
-      return (
-        '<section class="shop-section"><h2 class="shop-head">' +
-        escapeHtml(sec.section) + "</h2><ul class=\"shop-list\">" + items + "</ul></section>"
-      );
+      return '<section class="shop-section"><h2 class="shop-head">' +
+        escapeHtml(sec.section) + '</h2><ul class="shop-list">' + items + "</ul></section>";
     }).join("");
 
     app.innerHTML =
       '<a class="back" href="index.html#/recipe/' + encodeURIComponent(recipe.id) + '">← ' + escapeHtml(recipe.title) + "</a>" +
+      '<div class="eyebrow">Shopping list · ' + escapeHtml(recipe.title) + "</div>" +
       '<div class="progress-wrap"><div class="progress-num"><span id="got">0</span>/<span id="total">0</span></div>' +
       '<div class="progress-track"><div class="progress-fill" id="fill"></div></div>' +
       '<button class="reset-btn" id="reset">Reset</button></div>' +
