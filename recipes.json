@@ -110,7 +110,7 @@
       "Melt the butter in a wide pan on low heat. (Add the garlic now if using — about 1 minute, don't let it brown.)",
       "Pour the cream into the melted butter and heat gently until steaming, not boiling.",
       "Cheese goes in off the heat. Pull the pan off the burner and let it stop bubbling, then add the parmesan a handful at a time, whisking each lot in smoothly before the next.",
-      "Drain the pasta (don't rinse) and tip it into the sauce. Toss hard, splashing in pasta water bit by bit until the sauce turns silky and coats every strand. Season with salt and pepper.",
+      "Drain the pasta (don't rinse) and return it to its pot, then pour the sauce over it. Toss hard, splashing in pasta water bit by bit until the sauce turns silky and coats every strand. Season with salt and pepper.",
       "Serve immediately on warm plates with extra parmesan grated over the top. Alfredo stiffens as it sits, so don't let it wait."
     ],
     "notes": "The rules that matter most: keep the heat low (heat is what breaks the sauce); add the cheese off the heat (too hot turns it grainy and stringy); pasta water is your fix — if it ever looks tight, oily or split, a splash plus hard tossing pulls it back together; and use a real block of parmesan grated yourself, since pre-shredded has anti-caking starch that won't melt cleanly. To level up later, drop the cream entirely and make the Roman version: just butter, parmesan and pasta water emulsified together.",
@@ -126,6 +126,35 @@
       { "section": "Pantry / Spices", "items": [
         { "name": "Salt & pepper", "amt": "check pantry", "hint": "probably already have" },
         { "name": "Garlic + nutmeg", "amt": "optional", "hint": "only if you want them" }
+      ]}
+    ]
+  },
+  {
+    "id": "lemonade",
+    "title": "Lemonade",
+    "description": "A fresh 1-litre jug. The sugar goes into hot water first so it fully dissolves — never grainy.",
+    "servings": 4,
+    "prepTime": "5 min",
+    "tags": ["drinks", "kid-friendly", "quick"],
+    "ingredients": [
+      "250 ml boiling water",
+      "6–8 tbsp sugar, to taste",
+      "250 ml lemon juice (about 4 lemons)",
+      "500 ml cold water"
+    ],
+    "steps": [
+      "Mix the boiling water with the sugar, stirring until it fully dissolves.",
+      "Stir in the lemon juice.",
+      "Add the cold water and mix — that brings it to 1 litre.",
+      "Chill in the fridge, then serve over ice."
+    ],
+    "notes": "Makes about 1 litre. Start at 6 tbsp sugar and taste — lemons vary, so add more if it's too sharp.",
+    "shopping": [
+      { "section": "Fruit & Veg", "items": [
+        { "name": "Lemons", "amt": "4", "hint": "for 250 ml juice" }
+      ]},
+      { "section": "Pantry", "items": [
+        { "name": "Sugar", "amt": "6–8 tbsp", "hint": "likely already have" }
       ]}
     ]
   }
