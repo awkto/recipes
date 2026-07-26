@@ -189,7 +189,7 @@
     "variations": [
       { "title": "No stock", "body": "Swap the 1/2 cup stock for 1/4 cup water. Less depth, but the butter carries it." }
     ],
-    "notes": "Don't touch the chicken during the long sear — moving it tears the skin before it releases. If the sauce breaks, pull the pan off the heat and whisk in another cold pat of butter or a splash of stock. Standard-size thighs rather than large ones want closer to 18 minutes on the skin side.",
+    "notes": "NYT Cooking, Eric Kim — from their Top 50 of 2025. Don't touch the chicken during the long sear — moving it tears the skin before it releases. If the sauce breaks, pull the pan off the heat and whisk in another cold pat of butter or a splash of stock. Standard-size thighs rather than large ones want closer to 18 minutes on the skin side. Dark meat tastes best around 82°C, above the 74°C safety minimum, because the connective tissue needs the extra time.",
     "shopping": [
       { "section": "Meat", "items": [
         { "name": "Chicken thighs, bone-in skin-on", "amt": "4 large / ~900 g", "hint": "bone-in and skin-on — fillets will not work here" }
@@ -278,7 +278,7 @@
       "Grate the cucumber for the tzatziki and wring out as much water as you can in a clean tea towel. Stir it into the yoghurt with the garlic, lemon juice, dill if using, salt and pepper until smooth.",
       "Divide the potatoes, chicken, salad and tzatziki between four bowls."
     ],
-    "notes": "Buy 2 cucumbers — the salad takes a large one diced and the tzatziki another half, grated. 1200 g of diced potato will not fit one air fryer basket in a single layer; do it in two batches or they steam instead of crisping, and hold the first batch warm in the oven. The yoghurt in the marinade tenderises, so it works fine at 30 minutes but is better left a few hours. Components keep separately in the fridge for 3–4 days, so it portions well ahead; keep the tzatziki off the potatoes until serving.",
+    "notes": "Buy 2 cucumbers — the salad takes a large one diced and the tzatziki another half, grated. 1200 g of diced potato will not fit one air fryer basket in a single layer; do it in two batches or they steam instead of crisping, and hold the first batch warm in the oven. The yoghurt in the marinade tenderises, so it works fine at 30 minutes but is better left a few hours. Components keep separately in the fridge for 3–4 days, so it portions well ahead; keep the tzatziki off the potatoes until serving. The original omits dill from the ingredient list but calls for it in the tzatziki step.",
     "shopping": [
       { "section": "Meat", "items": [
         { "name": "Chicken breast", "amt": "800 g", "hint": "cut into chunks for skewers" }
@@ -294,7 +294,7 @@
         { "name": "Dill", "amt": "1 bunch", "hint": "optional, for the tzatziki" }
       ]},
       { "section": "Dairy & Chilled", "items": [
-        { "name": "0% Greek yoghurt", "amt": "500 g tub", "hint": "2 cups all up — ½ marinade + 1½ tzatziki" }
+        { "name": "0% Greek yoghurt", "amt": "500 g tub", "hint": "2 cups all up — ½ marinade + 1½ tzatziki, nothing spare" }
       ]},
       { "section": "Pantry / Spices", "items": [
         { "name": "Dried oregano", "amt": "1 jar", "hint": "4 tsp total" },
