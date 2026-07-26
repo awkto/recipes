@@ -157,5 +157,152 @@
         { "name": "Sugar", "amt": "6–8 tbsp", "hint": "likely already have" }
       ]}
     ]
+  },
+  {
+    "id": "crispy-chicken-lime-butter",
+    "title": "Crispy Chicken With Lime Butter",
+    "description": "Thighs slow-seared almost entirely skin-side down, with a lime-and-maple pan sauce emulsified with cold butter. Shatteringly crisp skin, no thermometer needed.",
+    "servings": 4,
+    "prepTime": "15 min",
+    "cookTime": "35 min",
+    "tags": ["dinner", "chicken", "one-pan"],
+    "ingredients": [
+      "4 large bone-in, skin-on chicken thighs (about 900 g)",
+      "1 1/2 tsp salt, plus more to season the sauce",
+      "1 tsp freshly ground black pepper",
+      "1 tbsp peanut or canola oil",
+      "2 garlic cloves, crushed",
+      "1/2 cup chicken stock (or 1/4 cup water)",
+      "2 tbsp fresh lime juice, plus wedges to serve",
+      "2 tsp maple syrup",
+      "3 tbsp cold unsalted butter, cut into pats",
+      "Parsley, coriander, basil or mint leaves, to serve (optional)"
+    ],
+    "steps": [
+      "Pat the thighs thoroughly dry, season all over with the salt and pepper, and leave at room temperature 10–30 minutes. Blot dry again before cooking — dry skin is the whole game.",
+      "Heat a large heavy skillet (cast iron is ideal) over medium. Add the oil and swirl to coat. Lay the chicken in skin-side down and leave it completely alone for 20–25 minutes, dropping to medium-low if it colours too fast. When the steady sputtering fades, the moisture has driven off and the skin is set.",
+      "Add the garlic, flip the chicken, and cook another 5 minutes until lightly browned underneath and cooked through. Move to a plate skin-side up. Pour off the rendered fat, keeping about 3 tbsp in the pan.",
+      "Add the stock, lime juice and maple syrup and season. Bring to a simmer over high, then pull back to medium and cook, stirring occasionally, until reduced by half — about 3 minutes.",
+      "Add the cold butter and keep at a bare simmer, stirring constantly, until incorporated. The sauce thickens and turns glossy. Too hot and it splits, so ease off the heat if needed. Taste and adjust seasoning.",
+      "Spoon the sauce over the chicken and serve with lime wedges and herbs, dressed with a squeeze of lime and a pinch of salt. Something starchy alongside catches the sauce."
+    ],
+    "variations": [
+      { "title": "No stock", "body": "Swap the 1/2 cup stock for 1/4 cup water. Less depth, but the butter carries it." }
+    ],
+    "notes": "Don't touch the chicken during the long sear — moving it tears the skin before it releases. If the sauce breaks, pull the pan off the heat and whisk in another cold pat of butter or a splash of stock. Standard-size thighs rather than large ones want closer to 18 minutes on the skin side.",
+    "shopping": [
+      { "section": "Meat", "items": [
+        { "name": "Chicken thighs, bone-in skin-on", "amt": "4 large / ~900 g", "hint": "bone-in and skin-on — fillets will not work here" }
+      ]},
+      { "section": "Fruit & Veg", "items": [
+        { "name": "Limes", "amt": "2–3", "hint": "need 2 tbsp juice plus wedges" },
+        { "name": "Garlic", "amt": "1 bulb", "hint": "2 cloves, crushed" },
+        { "name": "Fresh herbs", "amt": "1 bunch", "hint": "optional — parsley, coriander, basil or mint" }
+      ]},
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Unsalted butter", "amt": "1 block", "hint": "need 3 tbsp, kept cold" }
+      ]},
+      { "section": "Pantry", "items": [
+        { "name": "Chicken stock", "amt": "1/2 cup", "hint": "carton or cube" },
+        { "name": "Maple syrup", "amt": "small bottle", "hint": "need 2 tsp — real maple, not pancake syrup" },
+        { "name": "Peanut or canola oil", "amt": "check pantry", "hint": "need 1 tbsp, neutral" }
+      ]}
+    ]
+  },
+  {
+    "id": "chicken-souvlaki-bowl",
+    "title": "Chicken Souvlaki Bowl",
+    "description": "Yoghurt-marinated chicken, air-fried oregano potatoes, chopped Greek salad and tzatziki, built as four bowls. Everything but the marinade comes together while the potatoes cook.",
+    "servings": 4,
+    "prepTime": "25 min",
+    "marinateTime": "30 min",
+    "cookTime": "35 min",
+    "tags": ["dinner", "chicken", "meal-prep", "air-fryer"],
+    "ingredients": [
+      {
+        "group": "Chicken marinade",
+        "items": [
+          "800 g chicken breast, cut into chunks",
+          "1/2 cup 0% Greek yoghurt",
+          "2 tbsp lemon juice",
+          "1 tbsp olive oil",
+          "4 garlic cloves, minced",
+          "2 tsp dried oregano",
+          "2 tsp paprika",
+          "1 1/2 tsp salt",
+          "1 tsp black pepper"
+        ]
+      },
+      {
+        "group": "Potatoes",
+        "items": [
+          "1200 g potatoes, diced small",
+          "Olive oil spray",
+          "2 tsp dried oregano",
+          "1 tbsp garlic powder",
+          "2 tsp paprika",
+          "1 tsp salt",
+          "1/2 tsp black pepper",
+          "1 tbsp lemon juice, to finish"
+        ]
+      },
+      {
+        "group": "Greek salad",
+        "items": [
+          "1 large cucumber, diced",
+          "2 medium tomatoes, diced",
+          "1/2 medium red onion, sliced",
+          "2 tbsp parsley, chopped",
+          "1 tbsp lemon juice",
+          "Pinch of salt"
+        ]
+      },
+      {
+        "group": "Tzatziki",
+        "items": [
+          "1 1/2 cups 0% Greek yoghurt",
+          "1/2 cucumber, grated and squeezed dry",
+          "2 garlic cloves, grated",
+          "1 tbsp lemon juice",
+          "1 tbsp dill, chopped (optional)",
+          "1/2 tsp salt",
+          "Pinch of black pepper"
+        ]
+      }
+    ],
+    "steps": [
+      "Marinate the chicken first. Combine the chicken with the yoghurt, olive oil, lemon juice, garlic, oregano, paprika, salt and pepper. Mix well and leave at least 30 minutes. Thread onto skewers if you have them.",
+      "Dice the potatoes small, then toss with the oregano, garlic powder, paprika, salt, pepper and a few sprays of olive oil. Air fry at 200°C / 400°F for 20 minutes, shaking halfway, then finish with the lemon juice.",
+      "Air fry the chicken at 200°C / 400°F for about 12 minutes, until cooked through and lightly charred at the edges.",
+      "Chop the cucumber, tomatoes, red onion and parsley into a bowl. Add the lemon juice and a small pinch of salt and mix.",
+      "Grate the cucumber for the tzatziki and wring out as much water as you can in a clean tea towel. Stir it into the yoghurt with the garlic, lemon juice, dill if using, salt and pepper until smooth.",
+      "Divide the potatoes, chicken, salad and tzatziki between four bowls."
+    ],
+    "notes": "Buy 2 cucumbers — the salad takes a large one diced and the tzatziki another half, grated. 1200 g of diced potato will not fit one air fryer basket in a single layer; do it in two batches or they steam instead of crisping, and hold the first batch warm in the oven. The yoghurt in the marinade tenderises, so it works fine at 30 minutes but is better left a few hours. Components keep separately in the fridge for 3–4 days, so it portions well ahead; keep the tzatziki off the potatoes until serving.",
+    "shopping": [
+      { "section": "Meat", "items": [
+        { "name": "Chicken breast", "amt": "800 g", "hint": "cut into chunks for skewers" }
+      ]},
+      { "section": "Fruit & Veg", "items": [
+        { "name": "Potatoes", "amt": "1200 g", "hint": "waxy or all-rounder, diced small" },
+        { "name": "Cucumbers", "amt": "2", "hint": "1 large diced for the salad, ½ grated for the tzatziki" },
+        { "name": "Tomatoes", "amt": "2 medium", "hint": "" },
+        { "name": "Red onion", "amt": "1", "hint": "recipe uses half" },
+        { "name": "Lemons", "amt": "3", "hint": "5 tbsp juice all up" },
+        { "name": "Garlic", "amt": "1 bulb", "hint": "6 cloves: 4 marinade + 2 tzatziki" },
+        { "name": "Parsley", "amt": "1 bunch", "hint": "need 2 tbsp chopped" },
+        { "name": "Dill", "amt": "1 bunch", "hint": "optional, for the tzatziki" }
+      ]},
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "0% Greek yoghurt", "amt": "500 g tub", "hint": "2 cups all up — ½ marinade + 1½ tzatziki" }
+      ]},
+      { "section": "Pantry / Spices", "items": [
+        { "name": "Dried oregano", "amt": "1 jar", "hint": "4 tsp total" },
+        { "name": "Paprika", "amt": "1 jar", "hint": "4 tsp total" },
+        { "name": "Garlic powder", "amt": "1 jar", "hint": "1 tbsp for the potatoes" },
+        { "name": "Olive oil spray", "amt": "1 can", "hint": "for the potatoes" },
+        { "name": "Olive oil, salt & pepper", "amt": "check pantry", "hint": "probably already have" }
+      ]}
+    ]
   }
 ]

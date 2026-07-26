@@ -2,7 +2,7 @@
 
 A tiny static recipe site for the two of us. No backend, no database, no framework,
 no build step — just HTML/CSS/JS and one JSON file. Lives at
-**https://recipes.box.dnsif.ca**.
+**https://awkto.github.io/recipes/**.
 
 ```
 index.html      home page — list, search, tag filter
@@ -10,13 +10,13 @@ list.html       mobile shopping-list checklist (one per recipe, ticks saved on t
 app.js          renders the recipe pages
 style.css       styling (warm, print-friendly)
 recipes.json    ← all the recipes live here
+scripts/        validate-recipes.py — schema check, runs in CI
 ```
 
 ## Adding or editing a recipe
 
-Everything lives in `recipes.json` — one object per recipe. Edit it, commit, push.
-The box picks up the change within 5 minutes (see Deployment). Only `id`, `title`,
-`ingredients` and `steps` are required; the rest are optional.
+Everything lives in `recipes.json` — one object per recipe. Edit it, validate, commit,
+push. Only `id`, `title`, `ingredients` and `steps` are required; the rest are optional.
 
 ```json
 {
@@ -44,19 +44,39 @@ The box picks up the change within 5 minutes (see Deployment). Only `id`, `title
 
 Field notes:
 
-- **`id`** — unique, URL-friendly (lowercase, dashes). It becomes the link:
-  `recipes.box.dnsif.ca/#/recipe/banana-bread`.
-- **`ingredients`** — either a flat list of strings, **or** groups:
+- **`id`** — required, unique, URL-friendly (lowercase words separated by dashes). It
+  becomes the link: `awkto.github.io/recipes/#/recipe/banana-bread`.
+- **`title`** — required, a string.
+- **`ingredients`** — required, non-empty. Either a flat list of strings, **or** groups:
   `[{ "group": "The sauce", "items": ["...", "..."] }, ...]`. The gyro uses groups.
+- **`steps`** — required, a list of strings.
+- **`tags`** — optional list of strings; powers the filter chips and search on the home page.
 - **`variations`** — optional; add these once you've made it a few times. Each is a
   string, or `{ "title": "...", "body": "..." }`. They show as their own section.
 - **`shopping`** — optional; if present, the recipe gets a **🛒 Shopping list** button
-  that opens `list.html` as a tickable, phone-friendly checklist. Ticks are saved in
-  the browser (localStorage), so you can check things off as you walk the aisles.
-- `tags` power the filter chips and search on the home page.
+  that opens `list.html` as a tickable, phone-friendly checklist. Each entry is
+  `{ "section": "...", "items": [...] }` and every item needs at least a `name`
+  (`amt` and `hint` are optional). Ticks are saved in the browser (localStorage), so
+  you can check things off as you walk the aisles.
+- `description`, `servings`, `prepTime`, `marinateTime`, `cookTime` and `notes` are all
+  optional free-form extras.
 
-Tip: run `python3 -m json.tool recipes.json` after editing to catch typos — a broken
-comma will blank the site.
+Write real unicode straight into the file — `—`, `–`, `°C`, `½` — rather than `\u`
+escapes, and keep the 2-space indent.
+
+## Validating
+
+A stray comma in `recipes.json` blanks the entire site, so check before you push:
+
+```sh
+python3 -m json.tool recipes.json      # is it even JSON?
+python3 scripts/validate-recipes.py    # does it match the schema above?
+```
+
+The validator prints readable errors and exits non-zero if anything is wrong. Unknown
+top-level keys are warnings, not errors. It defaults to the repo's `recipes.json`;
+pass a path to check a different file. Both commands also run in CI on every push and
+pull request, and a failing check blocks the deploy.
 
 ## Running locally
 
@@ -66,21 +86,18 @@ Because the pages fetch `recipes.json`, open through a server, not `file://`:
 python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
-## Deployment (how it actually runs)
+## Deployment
 
-The site is **static files served straight from a git checkout** — no app process, so
-it adds essentially **zero RAM** on the box (which matters: box.dnsif.ca runs on ~1 GB).
-This mirrors the existing `learn.dnsif.ca` setup.
+The site is published to **GitHub Pages** by `.github/workflows/pages.yml` on every
+push to `main` (and on demand via *Actions → Deploy to GitHub Pages → Run workflow*).
+Pull requests run the validation job only — they never deploy.
 
-- **Repo:** `github.com/awkto/recipes` (public).
-- **On the box:** checked out at `/home/altanc/git/recipes`, served by nginx at
-  `recipes.box.dnsif.ca` using the wildcard cert (`/etc/nginx/ssl/box.dnsif.ca.*`) and
-  wildcard DNS (`*.box.dnsif.ca` → the box). nginx config: `deploy/recipes.box.dnsif.ca`.
-- **Auto-pull:** a cron job every 5 minutes does a hard reset to `origin/main`:
-  ```
-  */5 * * * * cd /home/altanc/git/recipes && git fetch origin -q && git clean -fd -q && git reset --hard origin/main -q
-  ```
+The deploy job stages `index.html`, `list.html`, `app.js`, `style.css` and
+`recipes.json` into `_site/` and uploads only that, so `scripts/`, `.github/` and this
+README aren't served.
 
-So the whole workflow is: **edit `recipes.json` → `git push` → live within 5 minutes.**
-No SSH, no redeploy. To push a change instantly instead of waiting, SSH in and run the
-cron line by hand.
+**One-time setup:** in the repo's **Settings → Pages**, set **Source** to
+**"GitHub Actions"**. Without that the workflow has nothing to deploy into.
+
+So the whole workflow is: **edit `recipes.json` → validate → `git push` → live once the
+Action finishes.**

@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -10,13 +11,28 @@ permissions:
   pages: write
   id-token: write
 
-# Only one Pages deploy at a time; newer pushes supersede in-flight ones.
+# One Pages deploy at a time. Deploys are not cancelled in flight — a half-applied
+# deploy would leave the live site inconsistent.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check recipes.json parses
+        run: python3 -m json.tool recipes.json
+      - name: Validate recipe schema
+        run: python3 scripts/validate-recipes.py
+
   deploy:
+    needs: validate
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -24,10 +40,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Stage the site
+        # Only the files the site actually serves — scripts/, .github/ and the
+        # README stay out of the published artifact.
+        run: |
+          mkdir -p _site
+          cp index.html list.html app.js style.css recipes.json _site/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
