@@ -304,5 +304,52 @@
         { "name": "Olive oil, salt & pepper", "amt": "check pantry", "hint": "probably already have" }
       ]}
     ]
-  }
+  },
+  {
+  "id": "buttered-pasta",
+  "title": "Buttered Pasta",
+  "description": "Pasta boiled in heavily salted water and tossed with unsalted butter until glossy. No sauce, four ingredients, ten minutes. Prawns or steak turn it into a full meal.",
+  "servings": 2,
+  "prepTime": "2 min",
+  "cookTime": "12 min",
+  "tags": ["dinner", "pasta", "quick", "weeknight"],
+  "ingredients": [
+    "200 g dried pasta, any short shape",
+    "1 tbsp salt, for the water",
+    "25-30 g unsalted butter",
+    "Black pepper, to taste"
+  ],
+  "steps": [
+    "Bring 3-4 L of water to a rolling boil. Add the salt - about a tablespoon, more than you would use if a sauce were going on. With no sauce, the water is the only seasoning the pasta gets.",
+    "Add the pasta and cook to the time on the packet. Before draining, scoop out half a mug of the cooking water and keep it.",
+    "Drain the pasta and return it to the hot, dry pot off the heat. Add the butter and toss until it has fully melted and coated every piece.",
+    "If it looks dry or the butter sits in a pool, add a splash of the reserved water and keep tossing. The starch in the water and the butter pull together into a light glaze.",
+    "Crack black pepper over and serve straight away."
+  ],
+  "variations": [
+    {
+      "title": "With prawns",
+      "body": "A 500 g bag of frozen cooked and peeled prawns (Coles sell these tail-off). Thaw under cold running water and pat dry. Melt a knob of butter in a frying pan over medium heat and toss the prawns for 2-3 minutes, just until heated through - they are already cooked, so any longer and they go rubbery. Tip the pan contents, butter and all, over the pasta."
+    },
+    {
+      "title": "With steak",
+      "body": "One or two steaks from a Coles pack. Salt them and pan fry over high heat to your liking, then rest 5 minutes on a board. While resting, drop a knob of butter into the hot pan with a pinch of garlic powder or pepper and swirl until foaming. Slice the steak against the grain, put it over the pasta and pour the spiced butter and resting juices on top."
+    }
+  ],
+  "notes": "Unsalted butter is the right call here - the pasta water already carries all the salt, and salted butter on top of that overshoots. Use the reserved pasta water freely; it is the difference between a glaze and butter sliding off. Both proteins cook in the time the pasta boils, so nothing needs to wait. Frozen cooked prawns are the lowest-effort protein of the two: no raw handling, no doneness to judge."
+  ,
+  "shopping": [
+    { "section": "Pantry", "items": [
+      { "name": "Dried pasta", "amt": "500 g box", "hint": "200 g for two serves" },
+      { "name": "Salt", "amt": "check pantry", "hint": "1 tbsp for the water" }
+    ]},
+    { "section": "Dairy & Chilled", "items": [
+      { "name": "Unsalted butter", "amt": "250 g block", "hint": "25-30 g for the pasta, plus a knob if doing prawns or steak" }
+    ]},
+    { "section": "Meat & Seafood", "items": [
+      { "name": "Cooked frozen prawns", "amt": "500 g bag", "hint": "optional - Coles, peeled and tail-off" },
+      { "name": "Steak", "amt": "1-2", "hint": "optional - Coles pack" }
+    ]}
+  ]
+}
 ]
