@@ -351,5 +351,131 @@
       { "name": "Steak", "amt": "1-2", "hint": "optional - Coles pack" }
     ]}
   ]
-}
+},
+  {
+    "id": "apple-turnovers",
+    "title": "Apple Turnovers",
+    "description": "Warm cinnamon apples wrapped in crispy puff pastry.",
+    "prepTime": "15 min",
+    "cookTime": "15–20 min",
+    "tags": ["dessert", "baking", "vegetarian"],
+    "ingredients": [
+      "2–3 apples",
+      "Frozen puff pastry sheets",
+      "½–1 tsp ground cinnamon",
+      "1–2 tsp sugar",
+      "Small knob of butter",
+      "Small splash of water",
+      "Milk or 1 beaten egg for brushing (optional)"
+    ],
+    "steps": [
+      "Heat oven to 200°C, or 180°C fan-forced.",
+      "Peel apples if desired and cut into small cubes.",
+      "Melt a small knob of butter in a pan.",
+      "Add apples, cinnamon and 1 tsp sugar.",
+      "Add a small splash of water and cook for 5–8 minutes.",
+      "Keep the apples slightly firm. Taste and add another teaspoon of sugar only if needed.",
+      "Let the mixture cool slightly.",
+      "Cut puff pastry into squares and place a spoonful of filling in the centre.",
+      "Fold diagonally into triangles and press edges closed with a fork.",
+      "Cut a small slit in the top and optionally brush with milk or beaten egg.",
+      "Bake for 15–20 minutes until puffed and golden."
+    ],
+    "notes": "Leftover cinnamon apples are great warmed up over waffles.",
+    "shopping": [
+      { "section": "Fruit & Veg", "items": [
+        { "name": "Apples", "amt": "2–3" }
+      ]},
+      { "section": "Freezer", "items": [
+        { "name": "Puff pastry sheets", "amt": "1 pack" }
+      ]},
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Butter", "amt": "small knob", "hint": "likely already have" },
+        { "name": "Milk or eggs", "amt": "a splash / 1 egg", "hint": "optional, for brushing" }
+      ]},
+      { "section": "Pantry / Spices", "items": [
+        { "name": "Ground cinnamon", "amt": "½–1 tsp" },
+        { "name": "Sugar", "amt": "1–2 tsp", "hint": "likely already have" }
+      ]}
+    ]
+  },
+  {
+    "id": "butter-cookies",
+    "title": "Butter Cookies",
+    "description": "Simple, buttery and perfect for adding colours.",
+    "prepTime": "10 min",
+    "cookTime": "10–14 min",
+    "tags": ["dessert", "baking", "vegetarian", "kid-friendly"],
+    "ingredients": [
+      "125 g softened butter",
+      "60 g sugar",
+      "200 g plain flour",
+      "1 tsp vanilla extract",
+      "Small pinch of salt",
+      "Food colouring (optional)"
+    ],
+    "steps": [
+      "Heat oven to 180°C, or 160°C fan-forced.",
+      "Mix softened butter and sugar until creamy.",
+      "Mix in vanilla.",
+      "Add flour and salt and mix until a soft dough forms.",
+      "For coloured cookies, divide the dough and knead a few drops of colouring into each portion.",
+      "Roll into small balls, place on a lined tray and flatten slightly.",
+      "Bake for 10–14 minutes, until the edges are just starting to turn golden.",
+      "Leave on the tray for 5 minutes before moving them to cool."
+    ],
+    "notes": "Don't wait for the whole cookie to brown. Just-golden edges keep them tender and buttery.",
+    "shopping": [
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Butter", "amt": "125 g", "hint": "leave out to soften" }
+      ]},
+      { "section": "Pantry", "items": [
+        { "name": "Plain flour", "amt": "200 g" },
+        { "name": "Sugar", "amt": "60 g", "hint": "likely already have" },
+        { "name": "Vanilla extract", "amt": "1 tsp" },
+        { "name": "Salt", "amt": "pinch", "hint": "likely already have" },
+        { "name": "Food colouring", "amt": "a few drops", "hint": "optional" }
+      ]}
+    ]
+  },
+  {
+    "id": "chocolate-pudding",
+    "title": "Chocolate Pudding",
+    "description": "Rich and chocolatey without being overly sweet.",
+    "servings": 4,
+    "prepTime": "5 min",
+    "cookTime": "5–8 min",
+    "tags": ["dessert", "vegetarian", "quick", "kid-friendly"],
+    "ingredients": [
+      "500 ml milk",
+      "2 tbsp cornflour",
+      "2 tbsp unsweetened baking cocoa",
+      "2 tbsp sugar",
+      "½ tsp vanilla extract",
+      "Small pinch of salt",
+      "20–30 g dark chocolate (optional)"
+    ],
+    "steps": [
+      "Put the cornflour, cocoa and sugar into a saucepan.",
+      "Add about ½ cup of cold milk and stir until completely smooth.",
+      "Pour in the remaining milk and stir.",
+      "Cook over medium heat, stirring continuously.",
+      "After about 5 minutes it should begin to bubble and thicken.",
+      "Remove from the heat and stir in the vanilla and optional dark chocolate.",
+      "Pour into bowls. Eat warm, or refrigerate for about 2 hours."
+    ],
+    "notes": "Not too sweet: start with 2 tbsp sugar. You can always increase it next time.",
+    "shopping": [
+      { "section": "Dairy & Chilled", "items": [
+        { "name": "Milk", "amt": "500 ml" }
+      ]},
+      { "section": "Pantry", "items": [
+        { "name": "Cornflour", "amt": "2 tbsp" },
+        { "name": "Unsweetened baking cocoa", "amt": "2 tbsp" },
+        { "name": "Sugar", "amt": "2 tbsp", "hint": "likely already have" },
+        { "name": "Vanilla extract", "amt": "½ tsp" },
+        { "name": "Dark chocolate", "amt": "20–30 g", "hint": "optional" }
+      ]}
+    ]
+  }
 ]
